@@ -1,0 +1,12 @@
+h4,h3{
+    text-align: center;
+    border: 1px solid black;
+}
+.row{
+    width: 30%;
+}
+.result{
+    height: 75px;
+    text-align: right;
+    padding-top: 20px;
+}
