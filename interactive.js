@@ -6,6 +6,7 @@ document.getElementById("addition").addEventListener("click",function(){
     if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/"))
     {
         document.getElementById("res").innerText=result.concat("+");
+        flag=0;
     }
 })
 
@@ -16,6 +17,7 @@ document.getElementById("subtraction").addEventListener("click",function(){
     if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/"))
     {
         document.getElementById("res").innerText=result.concat("-");
+        flag=0;
     }
 })
 
@@ -26,6 +28,7 @@ document.getElementById("multiplication").addEventListener("click",function(){
     if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/"))
     {
         document.getElementById("res").innerText=result.concat("*");
+        flag=0;
     }
 })
 
@@ -36,6 +39,7 @@ document.getElementById("division").addEventListener("click",function(){
     if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/"))
     {
         document.getElementById("res").innerText=result.concat("/");
+        flag=0;
     }
 })
 
@@ -165,8 +169,15 @@ document.getElementById("zero").addEventListener("click",function(){
 
 document.getElementById("dot").addEventListener("click",function(){
     const result=document.getElementById("res").innerText;
-    document.getElementById("res").innerText=result.concat(".");
-    flag=0;
+    if(flag==1)
+    {
+        document.getElementById("res").innerText=""+".";
+        flag=0;
+    }
+    else
+    {
+        document.getElementById("res").innerText=result.concat(".");
+    }
 })
 
 document.getElementById("deleteAll").addEventListener("click",function(){
