@@ -3,7 +3,7 @@ document.getElementById("addition").addEventListener("click",function(){
 
     const result=document.getElementById("res").innerText;
     const lastEntry=result[result.length-1];
-    if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/") &&flag!=1)
+    if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/"))
     {
         document.getElementById("res").innerText=result.concat("+");
     }
@@ -13,7 +13,7 @@ document.getElementById("subtraction").addEventListener("click",function(){
 
     const result=document.getElementById("res").innerText;
     const lastEntry=result[result.length-1];
-    if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/") &&flag!=1)
+    if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/"))
     {
         document.getElementById("res").innerText=result.concat("-");
     }
@@ -23,7 +23,7 @@ document.getElementById("multiplication").addEventListener("click",function(){
 
     const result=document.getElementById("res").innerText;
     const lastEntry=result[result.length-1];
-    if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/") &&flag!=1)
+    if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/"))
     {
         document.getElementById("res").innerText=result.concat("*");
     }
@@ -33,7 +33,7 @@ document.getElementById("division").addEventListener("click",function(){
 
     const result=document.getElementById("res").innerText;
     const lastEntry=result[result.length-1];
-    if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/") &&flag!=1)
+    if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/"))
     {
         document.getElementById("res").innerText=result.concat("/");
     }
@@ -54,7 +54,7 @@ document.getElementById("one").addEventListener("click",function(){
 })
 document.getElementById("two").addEventListener("click",function(){
     const result=document.getElementById("res").innerText;
-    if(flag==1)
+    if(flag==1 && result[result.length-1]!="*" && result[result.length-1]!="-" && result[result.length-1]!="+" && result[result.length-1]!="/")
     {
         document.getElementById("res").innerText=""+2;
         flag=0;
@@ -66,7 +66,7 @@ document.getElementById("two").addEventListener("click",function(){
 })
 document.getElementById("three").addEventListener("click",function(){
     const result=document.getElementById("res").innerText;
-    if(flag==1)
+    if(flag==1 && result[result.length-1]!="*" && result[result.length-1]!="-" && result[result.length-1]!="+" && result[result.length-1]!="/")
     {
         document.getElementById("res").innerText=""+3;
         flag=0;
@@ -79,7 +79,7 @@ document.getElementById("three").addEventListener("click",function(){
 
 document.getElementById("four").addEventListener("click",function(){
     const result=document.getElementById("res").innerText;
-    if(flag==1)
+    if(flag==1 && result[result.length-1]!="*" && result[result.length-1]!="-" && result[result.length-1]!="+" && result[result.length-1]!="/")
     {
         document.getElementById("res").innerText=""+4;
         flag=0;
@@ -91,7 +91,7 @@ document.getElementById("four").addEventListener("click",function(){
 })
 document.getElementById("five").addEventListener("click",function(){
     const result=document.getElementById("res").innerText;
-    if(flag==1)
+    if(flag==1 && result[result.length-1]!="*" && result[result.length-1]!="-" && result[result.length-1]!="+" && result[result.length-1]!="/")
     {
         document.getElementById("res").innerText=""+5;
         flag=0;
@@ -103,7 +103,7 @@ document.getElementById("five").addEventListener("click",function(){
 })
 document.getElementById("six").addEventListener("click",function(){
     const result=document.getElementById("res").innerText;
-    if(flag==1)
+    if(flag==1 && result[result.length-1]!="*" && result[result.length-1]!="-" && result[result.length-1]!="+" && result[result.length-1]!="/")
     {
         document.getElementById("res").innerText=""+6;
         flag=0;
@@ -115,7 +115,7 @@ document.getElementById("six").addEventListener("click",function(){
 })
 document.getElementById("seven").addEventListener("click",function(){
     const result=document.getElementById("res").innerText;
-    if(flag==1)
+    if(flag==1 && result[result.length-1]!="*" && result[result.length-1]!="-" && result[result.length-1]!="+" && result[result.length-1]!="/")
     {
         document.getElementById("res").innerText=""+7;
         flag=0;
@@ -127,7 +127,7 @@ document.getElementById("seven").addEventListener("click",function(){
 })
 document.getElementById("eight").addEventListener("click",function(){
     const result=document.getElementById("res").innerText;
-    if(flag==1)
+    if(flag==1 && result[result.length-1]!="*" && result[result.length-1]!="-" && result[result.length-1]!="+" && result[result.length-1]!="/")
     {
         document.getElementById("res").innerText=""+8;
         flag=0;
@@ -139,7 +139,7 @@ document.getElementById("eight").addEventListener("click",function(){
 })
 document.getElementById("nine").addEventListener("click",function(){
     const result=document.getElementById("res").innerText;
-    if(flag==1)
+    if(flag==1 && result[result.length-1]!="*" && result[result.length-1]!="-" && result[result.length-1]!="+" && result[result.length-1]!="/")
     {
         document.getElementById("res").innerText=""+9;
         flag=0;
@@ -152,7 +152,12 @@ document.getElementById("nine").addEventListener("click",function(){
 
 document.getElementById("zero").addEventListener("click",function(){
     const result=document.getElementById("res").innerText;
-    if(result!="")
+    if(flag==1 && result[result.length-1]!="*" && result[result.length-1]!="-" && result[result.length-1]!="+" && result[result.length-1]!="/")
+    {
+        document.getElementById("res").innerText=""+0;
+        flag=0;
+    }
+    else
     {
         document.getElementById("res").innerText=result.concat("0");
     }
@@ -160,15 +165,8 @@ document.getElementById("zero").addEventListener("click",function(){
 
 document.getElementById("dot").addEventListener("click",function(){
     const result=document.getElementById("res").innerText;
-    if(flag==1)
-    {
-        document.getElementById("res").innerText=""+".";
-        flag=0;
-    }
-    else
-    {
-        document.getElementById("res").innerText=result.concat(".");
-    }
+    document.getElementById("res").innerText=result.concat(".");
+    flag=0;
 })
 
 document.getElementById("deleteAll").addEventListener("click",function(){
