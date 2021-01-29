@@ -2,8 +2,6 @@ document.getElementById("addition").addEventListener("click",function(){
 
     const result=document.getElementById("res").innerText;
     const lastEntry=result[result.length-1];
-    // console.log(typeof result);
-    // console.log(result[result.length-1]);
     if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/"))
     {
         document.getElementById("res").innerText=result.concat("+");
@@ -14,8 +12,6 @@ document.getElementById("subtraction").addEventListener("click",function(){
 
     const result=document.getElementById("res").innerText;
     const lastEntry=result[result.length-1];
-    // console.log(typeof result);
-    // console.log(result[result.length-1]);
     if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/"))
     {
         document.getElementById("res").innerText=result.concat("-");
@@ -26,8 +22,6 @@ document.getElementById("multiplication").addEventListener("click",function(){
 
     const result=document.getElementById("res").innerText;
     const lastEntry=result[result.length-1];
-    // console.log(typeof result);
-    // console.log(result[result.length-1]);
     if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/"))
     {
         document.getElementById("res").innerText=result.concat("*");
@@ -38,8 +32,6 @@ document.getElementById("division").addEventListener("click",function(){
 
     const result=document.getElementById("res").innerText;
     const lastEntry=result[result.length-1];
-    // console.log(typeof result);
-    // console.log(result[result.length-1]);
     if(result!="" && (lastEntry!="+" && lastEntry!="-" && lastEntry!="*" && lastEntry!="/"))
     {
         document.getElementById("res").innerText=result.concat("/");
